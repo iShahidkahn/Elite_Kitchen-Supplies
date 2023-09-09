@@ -26,19 +26,18 @@ export default function Navbar() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
-                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-700" style={{background:"transparent"}}>
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                  )}
+                    <Image src='/icons/Menu.svg' width={24} height={20} alt='img' />)}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center md:me-8">
-                  <Image src="/logo.svg" alt='img' width={68} height={68} />
+              <div className="flex flex-1 items-center justify-start ms-14 md:ms-0 sm:items-stretch sm:justify-start">
+                <div className="flex flex-shrink-0 items-start md:me-8">
+                  <Image src="/logo.svg" alt='img' className='logo' width={68} height={68} />
                 </div>
                 <div className="hidden sm:ml-6 sm:block my-auto">
                   <div className="flex space-x-8">
@@ -54,13 +53,12 @@ export default function Navbar() {
                       >
                         {item.name}
                       </Link>
-
                     ))}
                   </div>
                 </div>
               </div>
               <div className=" inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  Search              
+                Search
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
