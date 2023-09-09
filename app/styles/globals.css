@@ -1,0 +1,265 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* styles/fonts.css */
+
+@font-face {
+  font-family: "Urbanist";
+  src: url("../../public/fonts/Urbanist-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "Urbanist", sans-serif !important;
+  color: #181513;
+}
+
+.nav {
+  color: #181513;
+  padding: 24px 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav {
+    padding: 10px 20px;
+  }
+}
+
+.active {
+  color: #cf940a;
+}
+
+.nav button {
+  border-radius: 8px;
+  background: #cf940a;
+  color: #fff;
+  /* font-family: Urbanist; */
+  font-size: 12px;
+  font-style: normal;
+  padding: 10px 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.wrapper {
+  margin: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    margin: 10px;
+  }
+}
+
+/*------------------------------------------- Landing Page --------------------------------*/
+
+/*----------- Hero Section ---------------*/
+
+.heroButton {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #fff;
+  width: fit-content;
+  /* font-family: "Urbanist", sans-serif; */
+  text-transform: uppercase;
+}
+
+.btn-category {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e1dedb;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  .btn-category {
+    width: fit-content;
+    margin-top: 10px;
+    padding: 12px 10px;
+  }
+}
+
+.btn-category:focus {
+  background: #cf940a;
+  color: #fff;
+}
+
+/*----------- /Hero Section ---------------*/
+
+/*----------- About Section ---------------*/
+
+.about-wrapper {
+  margin-top: 100px;
+}
+
+.about-wrapper h1 {
+  padding: 0 100px;
+}
+
+.about-wrapper p {
+  padding: 0 100px;
+}
+
+/*----------- /About  Section ---------------*/
+
+/*------------------------------------- /Landing Page ---------------------------------*/
+.slides-container {
+  -ms-overflow-style: none;
+  /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.slides-container::-webkit-scrollbar {
+  display: none;
+  /* Safari and Chrome */
+}
+
+/*------------------- Footer --------------------------*/
+.footer {
+  background: #181513;
+  padding: 50px 40px;
+}
+
+.footer h1 {
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  /* 18.2px */
+}
+
+.footer p {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 14px;
+}
+.footer p .link:hover {
+  color: #ffb300;
+}
+.footer p .link:focus {
+  color: #ffb300;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: #181513;
+  color: #fff;
+  font-size: 14px;
+  padding: 30px 40px;
+}
+
+.footer .social .ic {
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/*------------------- Footer --------------------------*/
+
+/*---------------------------------- Product Categories ----------------------------*/
+.product-categories h1 {
+  columns: rgba(24, 21, 19, 1);
+  font-size: 16px;
+  font-weight: 600;
+}
+.product-categories p {
+  columns: rgba(24, 21, 19, 1);
+  font-size: 14px;
+  line-height: 20.8px;
+}
+.product-categories .price {
+  color: #947d66;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20.8px;
+}
+.product-categories button {
+  color: #181513;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid #e1dedb;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.pagination .ic {
+  border-radius: var(--radius-radius-sm, 8px);
+  background: var(--colors-surface-surface-light, #fbf7f4);
+  color: #181513 !important;
+}
+.pagination .current {
+  background: #f2e8de;
+  border-radius: 8px;
+  font-weight: lighter;
+  color: #181513;
+}
+.pagination a {
+  color: #947d66;
+  font-weight: 500;
+}
+.pagination a:hover {
+  background: #f2e8de;
+  border-radius: 8px;
+  font-weight: lighter;
+  color: #181513;
+}
+.join-us {
+  border-radius: 8px;
+  border: 1px solid #e1dedb;
+  background: rgba(255, 255, 255, 0.1);
+  height: 270px;
+}
+.join-us p {
+  color: #947d66;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+.join-us button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #d3b393;
+  color: #fff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 130%; /* 18.2px */
+}
+.join-us input {
+  padding: var(--spacing-spacing-3, 12px) var(--spacing-spacing-4, 16px);
+  border-radius: var(--radius-radius-sm, 8px);
+  border: 1px solid var(--colors-border-border-light-1, #e1dedb);
+  background: var(--colors-surface-surface-light, #fbf7f4);
+  color: var(--colors-texts-text-low-emphasis, #947d66);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%; /* 18.2px */
+  width: 260px;
+}
+.join-us input::placeholder {
+color: #947d66;
+} 
+.join-us input:focus-visible {
+  outline: none;
+  background-color: white;
+} 
+
+
+/*---------------------------------- /Product Categories ----------------------------*/
