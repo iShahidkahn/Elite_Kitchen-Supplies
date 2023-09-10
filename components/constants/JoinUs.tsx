@@ -16,13 +16,12 @@ const JoinUs = () => {
     },
     validationSchema,
     onSubmit: (values) => {
-      // Handle form submission here
       console.log('Form submitted with values:', values);
     },
   });
 
   return (
-    <div className="join-us w-full flex justify-center py-10 text-center">
+    <div className="join-us w-full flex justify-center py-10 text-center my-20">
       <div className='max-w-xl lg:max-w-lg mt-3'>
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl ">STAY IN THE LOOP</h2>
         <p className="mt-1 text-lg leading-8 text-gray-300">
@@ -44,11 +43,9 @@ const JoinUs = () => {
             onBlur={formik.handleBlur}
             value={formik.values.email}
           />
-          
           <button type="submit" className="ms-3">
             Join
           </button>
-
           {formik.touched.email && formik.errors.email ? (
             <div className="text-red-600 mt-4">{formik.errors.email}</div>
           ) : null}

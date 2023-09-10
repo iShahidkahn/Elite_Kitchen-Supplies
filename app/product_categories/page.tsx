@@ -1,3 +1,4 @@
+import BookMeeting from '@/components/constants/BookMeeting'
 import JoinUs from '@/components/constants/JoinUs'
 import FilterandSort from '@/components/product_categories/Products'
 import TitleBar from '@/components/product_categories/TitleBar'
@@ -9,6 +10,7 @@ const page = () => {
         <TitleBar />
         <div className="wrapper">
             <FilterandSort />
+            <BookMeeting />
             <JoinUs />
         </div>
     </div>

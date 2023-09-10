@@ -45,7 +45,8 @@ body {
 }
 @media only screen and (max-width: 767px) {
   .nav .logo {
-width: 52px;  }
+    width: 52px;
+  }
 }
 
 .wrapper {
@@ -258,12 +259,58 @@ width: 52px;  }
   width: 260px;
 }
 .join-us input::placeholder {
-color: #947d66;
-} 
+  color: #947d66;
+}
 .join-us input:focus-visible {
   outline: none;
   background-color: white;
-} 
+}
 
+.book-meeting h1 {
+  color: var(--colors-primary-white, #fff);
 
-/*---------------------------------- /Product Categories ----------------------------*/
+  /* Headings/H4 */
+  font-family: Urbanist;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%; /* 41.6px */
+  text-transform: uppercase;
+}
+.book-meeting button {
+  color: #181513;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/*---------------------------------- /Product Categories ------------------------*/
+
+/********************************************************************************/
+
+/*---------------------------------- Product Details ----------------------------*/
+.product-details .sm-text {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20%;
+}
+.product-details .btn {
+  padding: 12px 24px;
+  border-radius: var(--radius-r-8, 8px);
+  background: #d3b393;
+  color: #fff;
+  width: 100%;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+/*---------------------------------- /Product Details ---------------------------*/
