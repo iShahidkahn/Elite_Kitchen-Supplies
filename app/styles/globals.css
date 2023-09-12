@@ -16,7 +16,6 @@ body {
   font-family: "Urbanist", sans-serif !important;
   color: #181513;
   font-weight: 600 !important;
-  text-transform: uppercase;
 }
 
 .nav {
@@ -334,6 +333,24 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 180%; 
+}
+.connect-us-form input, textarea {
+  border: 1px solid var(--colors-border-border-light-2, #D4D3D2);
+  background: var(--colors-surface-surface-opacity, rgba(255, 255, 255, 0.10));
+}
+.connect-us-form button {
+  display: flex;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+gap: 6px;
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 130%;
+text-transform: uppercase;
+border-radius: 8px;
+background: #F2E8DE;
 }
 /*---------------------------------- /About Us ---------------------------*/
 
