@@ -1,109 +1,110 @@
+'use client'
 import React from 'react';
-import { useFormik } from 'formik';
+import Image from 'next/image';
+import { Formik, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-
-const validationSchema = Yup.object({
-    name: Yup.string().required('Full Name is required'),
-    email: Yup.string().email('Invalid email address').required('Email Address is required'),
-    phone: Yup.number().required('Phone Number is required'),
+const validationSchema = Yup.object().shape({
+    name: Yup.string().required('Name is required'),
+    email: Yup.string().email('Invalid email').required('Email is required'),
+    phone: Yup.string().required('Phone number is required'),
 });
 
-const CartForm = () => {
-    const formik = useFormik({
-        initialValues: {
-            name: '',
-            email: '',
-            phone: '',
-        },
-        validationSchema,
-        onSubmit: (values) => {
-            console.log(values);
-        },
-    });
+
+const ConnectusForm = () => {
+    const handleSubmit = (values: any, { setSubmitting }: { setSubmitting: (isSubmitting: boolean) => void }) => {
+        // Handle form submission here
+        console.log(values);
+        setSubmitting(false);
+    };
+
 
     return (
-        <div className="">
-            <form className="space-y-6" onSubmit={formik.handleSubmit}>
-                <div>
-                    <label htmlFor="name" className="block text-sm font-medium leading-6 text-gray-900">
-                        Full Name*
-                    </label>
-                    <div className="mt-2">
-                        <input
-                            id="name"
-                            name="name"
-                            type="text"
-                            autoComplete="text"
-                            required
-                            className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${formik.touched.name && formik.errors.name ? 'border-red-500' : ''
-                                }`}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.name}
-                        />
-                    </div>
-                    {formik.touched.name && formik.errors.name && (
-                        <p className="text-red-500 text-sm mt-1">{formik.errors.name}</p>
+        <div className='cart-form'>
+            <div className="form">
+                <Formik
+                    initialValues={{
+                        name: '',
+                        email: '',
+                        phone: '',
+                    }}
+                    validationSchema={validationSchema}
+                    onSubmit={handleSubmit}
+                >
+                    {({ isSubmitting, errors, touched }) => (
+                        <form>
+                            <div>
+                                <div className="mt-10">
+                                    <div className="my-3">
+                                        <label htmlFor="first-name" className="text-sm font-medium leading-6" style={{ color: "#6A5A49" }}>
+                                            Full Name*
+                                        </label>
+                                        <div className="">
+                                            <Field
+                                                type="text"
+                                                name="name"
+                                                id="first-name"
+                                                autoComplete="given-name"
+                                                className={`block w-full rounded-lg border-0 px-3 py-3 shadow-sm ring-1 ring-inset ${errors.name && touched.name ? 'ring-red-500' : 'ring-gray-300'
+                                                    } placeholder:text-gray-300 placeholder:font-normal`}
+                                                placeholder='Enter full name'
+                                            />
+                                            <ErrorMessage name="name" component="div" className="text-red-500 text-sm" />
+                                        </div>
+                                    </div>
+                                    <div className="my-3">
+                                        <label htmlFor="email" className="text-sm font-medium leading-6" style={{ color: "#6A5A49" }}>
+                                            Email Address*
+                                        </label>
+                                        <div className="">
+                                            <Field
+                                                id="email"
+                                                name="email"
+                                                type="email"
+                                                autoComplete="email"
+                                                className={`block w-full rounded-lg border-0 px-3 py-3 shadow-sm ring-1 ring-inset ${errors.email && touched.email ? 'ring-red-500' : 'ring-gray-300'
+                                                    } placeholder:text-gray-300 placeholder:font-normal`}
+                                                placeholder='Enter email address'
+                                            />
+                                            <ErrorMessage name="email" component="div" className="text-red-500 text-sm" />
+                                        </div>
+                                    </div>
+                                    <div className="my-3">
+                                        <label htmlFor="phone" className="text-sm font-medium leading-6" style={{ color: "#6A5A49" }}>
+                                            Phone No*
+                                        </label>
+                                        <div className="">
+                                            <Field
+                                                id="phone"
+                                                name="phone"
+                                                type="number"
+                                                autoComplete="phone"
+                                                className={`block w-full rounded-lg border-0 px-3 py-3 shadow-sm ring-1 ring-inset ${errors.phone && touched.phone ? 'ring-red-500' : 'ring-gray-300'
+                                                    } placeholder:text-gray-300 placeholder:font-normal`}
+                                                placeholder='Enter your phone number (only digits)'
+                                            />
+                                            <ErrorMessage name="phone" component="div" className="text-red-500 text-sm" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="mt-6 flex items-center justify-start gap-x-6">
+                                <button type="submit" disabled={isSubmitting}>
+                                    REQUEST FOR QUOTE
+                                    <Image src="/icons/arrow_up_wht.svg" width={18} height={18} alt='icon' />
+                                </button>
+                            </div>
+                        </form>
                     )}
-                </div>
-                <div>
-                    <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
-                        Email Address*
-                    </label>
-                    <div className="mt-2">
-                        <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            autoComplete="text"
-                            required
-                            className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${formik.touched.email && formik.errors.email ? 'border-red-500' : ''
-                                }`}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.email}
-                        />
-                    </div>
-                    {formik.touched.email && formik.errors.email && (
-                        <p className="text-red-500 text-sm mt-1">{formik.errors.email}</p>
-                    )}
-                </div>
-                <div>
-                    <label htmlFor="phone" className="block text-sm font-medium leading-6 text-gray-900">
-                        Phone Number*
-                    </label>
-                    <div className="mt-2">
-                        <input
-                            id="phone"
-                            name="phone"
-                            type="number"
-                            autoComplete="text"
-                            required
-                            className={`block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${formik.touched.phone && formik.errors.phone ? 'border-red-500' : ''
-                                }`}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                            value={formik.values.phone}
-                        />
-                    </div>
-                    {formik.touched.phone && formik.errors.phone && (
-                        <p className="text-red-500 text-sm mt-1">{formik.errors.phone}</p>
-                    )}
-                </div>
-                <div>
-                    <button
-                        type="submit"
-                        className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                    >
-                        Sign in
-                    </button>
-                </div>
-            </form>
+                </Formik>
+            </div>
         </div>
     );
 };
 
-export default CartForm;
+export default ConnectusForm;
+
+
+
 
 

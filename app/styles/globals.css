@@ -315,45 +315,101 @@ body {
 
 /*---------------------------------- /Product Details ---------------------------*/
 /*------------------------------------ About Us ---------------------------*/
-.left-sec h2{
+.left-sec h2 {
   font-size: 12px !important;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; 
+  line-height: 120%;
 }
-.left-sec h1{
+.left-sec h1 {
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 128%; 
+  line-height: 128%;
 }
-.left-sec p{
+.left-sec p {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 180%; 
+  line-height: 180%;
 }
-.connect-us-form input, textarea {
-  border: 1px solid var(--colors-border-border-light-2, #D4D3D2);
-  background: var(--colors-surface-surface-opacity, rgba(255, 255, 255, 0.10));
+.connect-us-form input,
+textarea {
+  border: 1px solid #d4d3d2;
+  background: rgba(255, 255, 255, 0.1);
 }
 .connect-us-form button {
   display: flex;
-padding: 12px 24px;
-justify-content: center;
-align-items: center;
-gap: 6px;
-font-size: 14px;
-font-style: normal;
-font-weight: 600;
-line-height: 130%;
-text-transform: uppercase;
-border-radius: 8px;
-background: #F2E8DE;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+  border-radius: 8px;
+  background: #f2e8de;
 }
 /*---------------------------------- /About Us ---------------------------*/
 
+/*---------------------------------- Cart Details ---------------------------*/
+.quantity .checkbox {
+  border: 1px solid #947d66 !important;
+  border-radius: 8px !important;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
 
+/* Counter */
 
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 168px;
+  border-radius: 8px;
+  border: 1px solid #d4d3d2;
+  padding: 12px 24px;
+}
 
+.counter-button {
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
 
+.counter-value {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+.cart-form input,
+textarea {
+  border: 1px solid #d4d3d2;
+  background: rgba(255, 255, 255, 0.1);
+}
+.cart-form button {
+  color: #fff;
+  border-radius: 8px;
+  background: #d3b393;
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 6px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  text-transform: uppercase;
+  border-radius: 8px;
+}
+
+/*---------------------------------- /Cart Details ---------------------------*/
