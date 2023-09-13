@@ -23,7 +23,7 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-white nav">
       {({ open }) => (
         <>
-          <div className="mx-auto md:px-2 px-0 lg:px-8">
+          <div className="md:mx-auto mx-0 md:px-2 px-0 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                 {/* Mobile menu button*/}
@@ -40,7 +40,7 @@ export default function Navbar() {
                 <div className="flex flex-shrink-0 items-start md:me-8">
                   <Image src="/logo.svg" alt='img' className='logo' width={68} height={68} />
                 </div>
-                <div className="hidden sm:ml-6 md:block my-auto">
+                <div className="hidden  md:block my-auto">
                   <div className="flex space-x-8">
                     {navigation.map((item) => (
                       <Link
@@ -48,7 +48,7 @@ export default function Navbar() {
                         href={item.href}
                         className={classNames(
                           item.current ? 'active' : '',
-                          'md:px-3 px-1 py-2 text-sm font-semibold uppercase'
+                          'lg:px-3 px-0 py-2 text-sm font-semibold uppercase'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -61,7 +61,7 @@ export default function Navbar() {
               <div className="my-auto">
                 <Search />
               </div>
-              <div className="my-auto text-sm font-semibold uppercase">
+              <div className="my-auto text-sm font-semibold uppercase hidden lg:block">
                 Search
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">

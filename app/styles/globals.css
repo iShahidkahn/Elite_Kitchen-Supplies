@@ -29,7 +29,7 @@ body {
 
 @media only screen and (max-width: 767px) {
   .nav {
-    padding: 10px 20px;
+    padding: 10px 5px;
   }
 }
 

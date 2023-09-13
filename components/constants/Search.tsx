@@ -70,7 +70,7 @@ const SearchBar: React.FC = () => {
        
       </div>
       <div
-        className={`absolute right-0 mt-2 w-64 bg-white border rounded-lg shadow-lg flex transition-all ease-in-out duration-300 ${
+        className={`absolute right-0  z-50	 mt-2 w-64 bg-white border rounded-lg shadow-lg flex transition-all ease-in-out duration-300 ${
           isExpanded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
