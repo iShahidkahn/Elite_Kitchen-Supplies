@@ -45,7 +45,7 @@ const SearchBar: React.FC = () => {
     <div className="relative" ref={searchBarRef}>
       <div
         className={`flex items-center cursor-pointer p-2 transition-transform ease-in-out duration-300 ${
-          isExpanded ? 'transform rotate-90' : ''
+          isExpanded ? '' : ''
         }`}
         onClick={toggleSearch}
       >
@@ -65,12 +65,15 @@ const SearchBar: React.FC = () => {
             />
           </svg>
         ) : (
-         <Image src="/icons/search.svg" width={20} height={0} alt='image'/>
+          <>
+                   <Image src="/icons/search.svg" width={16} height={0} alt='image' className=''/> <p className='text-sm font-semibold uppercase ms-1 me-3'>Search</p>
+
+          </>
         )}
        
       </div>
       <div
-        className={`absolute right-0  z-50	 mt-2 w-64 bg-white border rounded-lg shadow-lg flex transition-all ease-in-out duration-300 ${
+        className={`absolute right-0 z-50	mt-2 w-64 bg-white border rounded-lg shadow-lg flex transition-all ease-in-out duration-300 ${
           isExpanded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
