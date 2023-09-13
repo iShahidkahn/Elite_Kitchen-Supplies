@@ -23,15 +23,15 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-white nav">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl md:px-2 px-0 sm:px-6 lg:px-8">
+          <div className="mx-auto md:px-2 px-0 lg:px-8">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+              <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-gray-700" style={{ background: "transparent" }}>
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                    <Image src='/icons/Menu.svg' width={24} height={20} alt='img' className='transition-transform ease-in-out duration-300 transform rotate-90'/>
                   ) : (
                     <Image src='/icons/Menu.svg' width={24} height={20} alt='img' />)}
                 </Disclosure.Button>
@@ -40,7 +40,7 @@ export default function Navbar() {
                 <div className="flex flex-shrink-0 items-start md:me-8">
                   <Image src="/logo.svg" alt='img' className='logo' width={68} height={68} />
                 </div>
-                <div className="hidden sm:ml-6 sm:block my-auto">
+                <div className="hidden sm:ml-6 md:block my-auto">
                   <div className="flex space-x-8">
                     {navigation.map((item) => (
                       <Link
@@ -48,7 +48,7 @@ export default function Navbar() {
                         href={item.href}
                         className={classNames(
                           item.current ? 'active' : '',
-                          'px-3 py-2 text-sm font-medium'
+                          'md:px-3 px-1 py-2 text-sm font-semibold uppercase'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -61,20 +61,20 @@ export default function Navbar() {
               <div className="my-auto">
                 <Search />
               </div>
-              <div className="my-auto text-sm font-medium">
-                Search              
+              <div className="my-auto text-sm font-semibold uppercase">
+                Search
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <button
                   type="button"
-                  className="hidden md:flex rounded focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                  className="rounded"
                 >
                   Book a meeting
                 </button>
               </div>
             </div>
           </div>
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel className="md:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               {navigation.map((item) => (
                 <Disclosure.Button

@@ -13,9 +13,9 @@ const ProductList = () => {
                 <div>
                     <Link href='/book_meeting'>
                         <div className="heroButton text-center mx-auto mt-6">
-                            <button className="flex uppercase">
+                            <button className="secondary-button flex uppercase" style={{ color: "inherit" }}>
                                 View all
-                                <Image src='/icons/arrow_top.svg' className="my-auto ms-2" width={16} height={0} alt="icon" />
+                                <Image src='/icons/arrow_top.svg' className="my-auto ms-1" width={16} height={0} alt="icon" />
                             </button>
                         </div>
                     </Link>

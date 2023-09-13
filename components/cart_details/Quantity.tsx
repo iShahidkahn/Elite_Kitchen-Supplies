@@ -48,7 +48,7 @@ const Quantity = () => {
                         </div>
                         <div className="sm:flex justify-between items-center">
                             <div>
-                                <div className="flex items-center gap-3" style={{ minHeight: "100px"}}>
+                                <div className="flex items-center gap-3" style={{ minHeight: "100px" }}>
                                     <input
                                         id="offers"
                                         name="offers"
@@ -63,22 +63,22 @@ const Quantity = () => {
                                 </div>
                             </div>
                             <div>
-                                <div className="flex items-center justify-between gap-12" style={{ minHeight: "100px"}}>
+                                <div className="flex items-center justify-between gap-12" style={{ minHeight: "100px" }}>
                                     <Counter />
                                     <h1 className="text-xl font-medium leading-5 uppercase">$ 704.64</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-span-1 ps-5" style={{borderLeft: "1px solid #d4d3d2" }}>
-                        <h1>FIND OUT HOW MUCH YOU CAN SAVE BY REQUESTING FOR A QUOTE</h1>
+                    <div className="col-span-1 ps-5" style={{ borderLeft: "1px solid #d4d3d2" }}>
+                        <h1 className="font-semibold leading-5">FIND OUT HOW MUCH YOU CAN SAVE BY REQUESTING FOR A QUOTE</h1>
                         <div className="flex justify-between items-center mt-4">
-                            <p>PRICE BEFORE DISCOUNT</p>
-                            <h3>$ 2,062.64</h3>
+                            <p className="text-xs">PRICE BEFORE DISCOUNT</p>
+                            <h3 className="font-semibold  ">$ 2,062.64</h3>
                         </div>
                         <div className="flex justify-between items-center">
-                            <p>PRICE BEFORE DISCOUNT</p>
-                            <h3>$ 2,062.64</h3>
+                            <p className="text-xs">PRICE BEFORE DISCOUNT</p>
+                            <h3 className="font-semibold blur-sm">$ 2,062.64</h3>
                         </div>
                         <CartForm />
                     </div>

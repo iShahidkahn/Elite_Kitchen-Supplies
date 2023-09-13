@@ -1,6 +1,8 @@
+'use client'
 import React from 'react';
 import Details from './Details';
 import Image from 'next/image';
+import Counter from '../cart_details/Counter';
 
 const ProductDetails = () => {
     return (
@@ -35,7 +37,9 @@ const ProductDetails = () => {
                         <p className="sm-text uppercase" style={{ color: '#6A5A49' }}>
                             MSRP STARTING AT
                         </p>
-                        <div className="counter my-3">QUANTITY</div>
+                        <div className="my-3">
+                            <Counter />
+                        </div>
                         <div>
                             <button className="btn">add to quote</button>
                         </div>
