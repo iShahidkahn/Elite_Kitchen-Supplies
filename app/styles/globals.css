@@ -169,10 +169,19 @@ body,html {
   position: relative;
   display: block;
   overflow: hidden;
-  margin: 0 -25% 0 20px !important;
-  padding: 0 10px !important;
+  margin: 0 -25% 0 20px ;
+  padding: 0 10px ;
 }
 
+@media only screen and (max-width: 767px) {
+  .featured-collection .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0 -20% 0 0 !important;
+    padding: 0 !important;
+  }
+}
 .featured-collection .carousel-img {
   display: flex !important;
   align-items: center !important;

@@ -5,7 +5,7 @@ import React from 'react'
 const ProductList = () => {
     return (
         <div className='my-20'>
-            <div className="flex items-center justify-between mx-4 mb-16">
+            <div className="flex items-center justify-between mx-1 sm:mx-4 mb-6 sm:mb-16">
                 <div>
                     <h1 className='text-xl sm:text-2xl md:text-3xl font-semibold uppercase leading-10'>brands we carry</h1>
                     <p className='text-sm' style={{ color: "#6A5A49" }}>Fresh styles, new beginnings: discover our latest arrivals!</p>
@@ -22,8 +22,8 @@ const ProductList = () => {
             <div className='my-3'>
                 <Image src='/images/product_list.svg' width={2000} height={100} alt='product_list' className='hidden sm:block' />
                 {/* <Image src='/images/brands_md.svg' width={100} height={100} alt='product_list' className='w-full sm:w-full hidden' /> */}
-                <Image src='/images/brand1_sm.svg' width={100} height={100} alt='product_list' className='w-full sm:w-hidden' />
-                <Image src='/images/brand2_sm.svg' width={100} height={100} alt='product_list' className='w-full sm:w-hidden' />
+                <Image src='/images/brand1_sm.svg' width={100} height={100} alt='product_list' className='w-full sm:hidden' />
+                <Image src='/images/brand2_sm.svg' width={100} height={100} alt='product_list' className='w-full sm:hidden' />
             </div>
             <div className="flex justify-center">
                 <Link href='/book_meeting' className='sm:hidden'>

@@ -72,69 +72,9 @@ const sliderData = [
         user_name: "Robert Fox",
         place: "Fairfield",
     },
-    {
-        heading:"very great product",
-        review:"Experience the epitome of style and comfort with our beautifully crafted wooden armchair that seamlessly blends timeless elegance with cozy relaxation.",
-        user_img: "/images/users/person1.svg",
-        user_name: "Guy Hawkins",
-        place: "Orange",
-    },
-    {
-        heading:"very great product",
-        review:"Experience the epitome of style and comfort with our beautifully crafted wooden armchair that seamlessly blends timeless elegance with cozy relaxation.",
-        user_img: "/images/users/person2.svg",
-        user_name: "Marvin McKinney",
-        place: "Austin",
-    },
-    {
-        heading:"very great product",
-        review:"Experience the epitome of style and comfort with our beautifully crafted wooden armchair that seamlessly blends timeless elegance with cozy relaxation.",
-        user_img: "/images/users/person1.svg",
-        user_name: "Robert Fox",
-        place: "Fairfield",
-    },
-    {
-        heading:"very great product",
-        review:"Experience the epitome of style and comfort with our beautifully crafted wooden armchair that seamlessly blends timeless elegance with cozy relaxation.",
-        user_img: "/images/users/person1.svg",
-        user_name: "Guy Hawkins",
-        place: "Orange",
-    },
-    {
-        heading:"very great product",
-        review:"Experience the epitome of style and comfort with our beautifully crafted wooden armchair that seamlessly blends timeless elegance with cozy relaxation.",
-        user_img: "/images/users/person2.svg",
-        user_name: "Marvin McKinney",
-        place: "Austin",
-    },
-    {
-        heading:"very great product",
-        review:"Experience the epitome of style and comfort with our beautifully crafted wooden armchair that seamlessly blends timeless elegance with cozy relaxation.",
-        user_img: "/images/users/person1.svg",
-        user_name: "Robert Fox",
-        place: "Fairfield",
-    },
-    {
-        heading:"very great product",
-        review:"Experience the epitome of style and comfort with our beautifully crafted wooden armchair that seamlessly blends timeless elegance with cozy relaxation.",
-        user_img: "/images/users/person1.svg",
-        user_name: "Guy Hawkins",
-        place: "Orange",
-    },
-    {
-        heading:"very great product",
-        review:"Experience the epitome of style and comfort with our beautifully crafted wooden armchair that seamlessly blends timeless elegance with cozy relaxation.",
-        user_img: "/images/users/person2.svg",
-        user_name: "Marvin McKinney",
-        place: "Austin",
-    },
-    {
-        heading:"very great product",
-        review:"Experience the epitome of style and comfort with our beautifully crafted wooden armchair that seamlessly blends timeless elegance with cozy relaxation.",
-        user_img: "/images/users/person1.svg",
-        user_name: "Robert Fox",
-        place: "Fairfield",
-    },
+   
+   
+   
     
 
 ]
@@ -188,7 +128,7 @@ const CustomerReview: React.FC<CustomerReviewProps> = () => {
   }, []);
 
   return (
-    <div className="customer-review py-16">
+    <div className="customer-review py-16 ms-3">
       <div>
         <h1 className="text-3xl uppercase font-semibold ">customer review</h1>
         <p className="text-sm leading-6 font-normal" style={{ color: "#947D66" }}>
