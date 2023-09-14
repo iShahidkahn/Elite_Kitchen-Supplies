@@ -73,10 +73,6 @@ const sliderData = [
         place: "Fairfield",
     },
    
-   
-   
-    
-
 ]
 
 const CustomerReview: React.FC<CustomerReviewProps> = () => {
