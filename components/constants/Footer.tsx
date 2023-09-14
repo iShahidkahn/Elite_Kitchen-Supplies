@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <>
             <div className="footer">
-                <div className="hidden md:grid grid-cols-5 gap-4">
+                <div className=" md:grid grid-cols-5 gap-4">
                     <div className='col-span-2'>
                         <Image src="/logo_light.svg" width={65} height={0} alt='footer-logo' />
                         <p className='my-6 me-5' style={{ opacity: "1" }}>

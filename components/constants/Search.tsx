@@ -44,9 +44,8 @@ const SearchBar: React.FC = () => {
   return (
     <div className="relative" ref={searchBarRef}>
       <div
-        className={`flex items-center cursor-pointer p-2 transition-transform ease-in-out duration-300 ${
-          isExpanded ? '' : ''
-        }`}
+        className={`flex items-center cursor-pointer p-2 transition-transform ease-in-out duration-300 ${isExpanded ? '' : ''
+          }`}
         onClick={toggleSearch}
       >
         {isLoading ? (
@@ -66,16 +65,15 @@ const SearchBar: React.FC = () => {
           </svg>
         ) : (
           <>
-                   <Image src="/icons/search.svg" width={16} height={0} alt='image' className=''/> <p className='text-sm font-semibold uppercase ms-1 me-3'>Search</p>
+            <Image src="/icons/search.svg" width={16} height={0} alt='image' className='' /> <p className='text-sm font-semibold uppercase ms-1 me-3 hidden sm:block'>Search</p>
 
           </>
         )}
-       
+
       </div>
       <div
-        className={`absolute right-0 z-50	mt-2 w-64 bg-white border rounded-lg shadow-lg flex transition-all ease-in-out duration-300 ${
-          isExpanded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
-        }`}
+        className={`absolute right-0 z-50	mt-2 w-64 bg-white border rounded-lg shadow-lg flex transition-all ease-in-out duration-300 ${isExpanded ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
+          }`}
       >
         <input
           type="text"
@@ -84,9 +82,8 @@ const SearchBar: React.FC = () => {
         />
         <button
           onClick={handleEnterClick}
-          className={`${
-            isLoading ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-500'
-          } text-white px-4 hover:bg-blue-600 focus:outline-none`}
+          className={`${isLoading ? 'bg-gray-300 cursor-not-allowed' : 'bg-blue-500'
+            } text-white px-4 hover:bg-blue-600 focus:outline-none`}
           disabled={isLoading}
         >
           {isLoading ? 'Loading...' : 'Enter'}
