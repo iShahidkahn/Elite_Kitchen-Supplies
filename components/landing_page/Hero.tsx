@@ -7,10 +7,10 @@ export default function Hero() {
     return (
         <div className="relative isolate overflow-hidden py-24 sm:py-32">
             <Image
-                src="/hero.svg"
+                src="images/hero.svg"
                 className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-                width={100}
-                height={100}
+                width={1200}
+                height={1200}
                 alt="image"
             />
             <div className="flex justify-items-center">

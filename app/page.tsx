@@ -12,11 +12,11 @@ export default function Home() {
     <>
       <Hero />
       <div className="wrapper">
-        <Category /> 
+        <Category />
       </div>
       <About />
       <div className="wrapper">
-        <ProductList/>
+        <ProductList />
       </div>
       <FeaturedCollection />
       <div className="wrapper">
