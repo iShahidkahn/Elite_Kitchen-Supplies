@@ -5,7 +5,7 @@ const TitleBar = () => {
   return (
     <div className="relative isolate overflow-hidden py-24 sm:py-32">
     <Image
-        src="/images/title_bar_bathroom.svg"
+        src="/images/title_product.png"
         className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
         width={100}
         height={100}

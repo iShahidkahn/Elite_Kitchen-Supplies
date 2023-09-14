@@ -30,7 +30,7 @@ const productDetails = [
 const Details = () => {
     return (
         <div className="bg-white">
-            <main className="mx-auto mt-8 px-4 px-6 md:px-0">
+            <main className="mx-auto mt-8 px-0 md:px-0">
                 <section>
                     <div className="">
                         {productDetails.map((section) => (

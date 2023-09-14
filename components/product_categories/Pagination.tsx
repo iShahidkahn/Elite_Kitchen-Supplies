@@ -59,7 +59,6 @@ const Pagination = () => {
                         >
                             8
                         </a>
-
                         <a
                             href="#"
                             className="ic rounded-r-md px-2 py-2"
