@@ -1,12 +1,16 @@
+import Link from 'next/link'
 import React from 'react'
 
 const Category = () => {
     return (
         <>
             <div className="flex flex-wrap gap-3">
+                <Link href="/product_categories">
                 <button type="button" className='btn-category flex-grow w-auto font-semibold'>
                     Bathroom Faucet
                 </button>
+                </Link>
+                
                 <button type="button" className='btn-category flex-grow w-auto font-semibold'>
                     Bathroom Faucet
                 </button>

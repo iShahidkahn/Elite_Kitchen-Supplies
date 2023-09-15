@@ -138,9 +138,11 @@ const FeaturedCollection: React.FC<FeaturedCollectionProps> = () => {
           <p className="text-sm leading-8	font-normal text-white font-normal">Get more, pay less: your ticket to furniture bliss!</p>
         </div>
         <div>
-          <button className="secondary-button mb-6 mt-3" style={{width:"fit-content"}}>
+          <button className="secondary-button mb-6 mt-3" style={{ width: "fit-content" }}>
             book a meeting
-            <Image src="/icons/arrow_top.svg" width={20} height={20} alt="icon" />
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor" className="w-4 h-6 transform rotate-45">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+            </svg>
           </button>
         </div>
       </div>

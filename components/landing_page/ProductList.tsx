@@ -14,14 +14,15 @@ const ProductList = () => {
                     <Link href='/book_meeting' className='hidden sm:block'>
                             <button className="secondary-button flex uppercase" style={{ color: "inherit" }}>
                                 View all
-                                <Image src='/icons/arrow_top.svg' className="my-auto ms-1" width={16} height={0} alt="icon" />
-                            </button>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.8} stroke="currentColor" className="w-4 h-6 transform rotate-45">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+                                </svg>                           
+                             </button>
                     </Link>
                 </div>
             </div>
             <div className='my-3'>
                 <Image src='/images/product_list.svg' width={2000} height={100} alt='product_list' className='hidden sm:block' />
-                {/* <Image src='/images/brands_md.svg' width={100} height={100} alt='product_list' className='w-full sm:w-full hidden' /> */}
                 <Image src='/images/brand1_sm.svg' width={100} height={100} alt='product_list' className='w-full sm:hidden' />
                 <Image src='/images/brand2_sm.svg' width={100} height={100} alt='product_list' className='w-full sm:hidden' />
             </div>

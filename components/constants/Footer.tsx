@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-// import Map from './Map'
 import Link from 'next/link'
 
 const Footer = () => {
@@ -15,7 +14,7 @@ const Footer = () => {
                             and commercial projects.
                         </p>
                         <div>
-                            {/* <Map /> */}
+                            
                         </div>
                     </div>
                     <div>
@@ -78,6 +77,7 @@ const Footer = () => {
                     <Image src="/images/c5.svg" width={26} height={0} alt='card' />
                 </div>
             </div>
+
         </>
 
 

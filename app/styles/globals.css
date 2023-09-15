@@ -12,7 +12,8 @@
   font-style: normal;
 }
 
-body,html {
+body,
+html {
   font-family: "Urbanist", sans-serif !important;
   color: #181513;
   overflow-x: hidden !important;
@@ -22,7 +23,7 @@ body,html {
   color: #181513;
   padding: 24px 20px;
 }
-.nav Link{
+.nav Link {
   color: #181513;
   padding: 24px 30px;
 }
@@ -41,12 +42,17 @@ body,html {
   border-radius: 8px;
   background: #cf940a;
   color: #fff;
-  /* font-family: Urbanist; */
   font-size: 12px;
   font-style: normal;
   padding: 10px 15px;
   font-weight: 600;
   text-transform: uppercase;
+  transition: background-color 0.4s ease, color 0.4s ease;
+
+}
+.nav button:hover {
+  background: black;
+  
 }
 @media only screen and (max-width: 767px) {
   .nav .logo {
@@ -80,6 +86,8 @@ body,html {
   line-height: 130%;
   text-transform: uppercase;
   border-radius: 8px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+
 }
 .secondary-button {
   color: #181513;
@@ -97,6 +105,13 @@ body,html {
   line-height: 130%;
   text-transform: uppercase;
   border-radius: 8px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+
+}
+.secondary-button:hover {
+  background: #d3b393;
+  color: white !important;
+
 }
 /*------------------------------------------- Landing Page --------------------------------*/
 
@@ -109,14 +124,23 @@ body,html {
   width: fit-content;
   /* font-family: "Urbanist", sans-serif; */
   text-transform: uppercase;
+  transition: background-color 0.4s ease, color 0.4s ease;
+font-weight: 600;
+}
+.heroButton:hover {
+ background-color: black;
+ color: #fff;
+ 
 }
 
 .btn-category {
   padding: 12px 16px;
   border-radius: 8px;
-  border: 1px solid #E1DEDB;
+  border: 1px solid #e1dedb;
   background: rgba(255, 255, 255, 0.1);
   font-size: 14px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -124,25 +148,25 @@ body,html {
     width: fit-content;
     margin-top: 10px;
     padding: 12px 10px;
+    
   }
 }
 
-.btn-category:focus {
-  border-color: #d3b393;
-  
+.btn-category:hover {
+  background: #d3b393;
+  color: white;
 }
 
 /*----------- /Hero Section ---------------*/
 
 /*----------- About Section ---------------*/
-.lp-about{
+.lp-about {
   min-height: 750px;
 }
 
 @media only screen and (max-width: 767px) {
-  .lp-about{
+  .lp-about {
     min-height: 290px !important;
-   
   }
 }
 /*----------- /About  Section ---------------*/
@@ -169,8 +193,8 @@ body,html {
   position: relative;
   display: block;
   overflow: hidden;
-  margin: 0 -25% 0 20px ;
-  padding: 0 10px ;
+  margin: 0 -25% 0 20px;
+  padding: 0 10px;
 }
 
 @media only screen and (max-width: 767px) {
@@ -198,12 +222,12 @@ body,html {
 /*----------- /FEATURED CATEGORY Section ---------------*/
 
 /*----------- Customer Review Section ---------------*/
-.customer-review .box{
+.customer-review .box {
   max-width: 360px !important;
 }
 
-.customer-review .slick-dots li  {
-margin:0 !important;
+.customer-review .slick-dots li {
+  margin: 0 !important;
 }
 .customer-review .slick-dots li button {
   font-size: 0;
@@ -213,20 +237,20 @@ margin:0 !important;
   /* padding: 5px; */
   cursor: pointer;
   color: transparent;
-  border: 1px solid #D3B393; /* Added border property */
+  border: 1px solid #d3b393; /* Added border property */
   outline: none;
   background: transparent !important; /* Changed background to transparent */
   border-radius: 50%; /* Added border-radius to make it a circle */
 }
 
 .customer-review .slick-dots li.slick-active button:before {
-opacity: 1;
-  background: #D3B393;
+  opacity: 1;
+  background: #d3b393;
   color: transparent;
 }
 
 .customer-review .slick-dots li button:before {
-  font-family: 'slick';
+  font-family: "slick";
   /* font-size: 11.65px; */
   /* line-height: 20px; */
   /* position: absolute; */
@@ -244,7 +268,6 @@ opacity: 1;
   -moz-osx-font-smoothing: grayscale; */
   border-radius: 50%; /* Added border-radius to make it a circle */
 }
-
 
 /*----------- /Customer Review Section ---------------*/
 
@@ -342,10 +365,10 @@ opacity: 1;
   border: none;
   border-radius: var(--radius-radius-sm, 8px);
   background: var(--colors-surface-surface-light, #fbf7f4);
-  color: #181513 ;
+  color: #181513;
 }
- .pagination .current {
-  background: #FBF7F4;
+.pagination .current {
+  background: #fbf7f4;
   border-radius: 8px;
   font-weight: lighter;
   color: #181513;
@@ -405,8 +428,8 @@ opacity: 1;
   background-color: white;
 }
 
-.book-meeting{
-  background-image: url('/images/book_a_meeting.svg');
+.book-meeting {
+  background-image: url("/images/book_a_meeting.svg");
   width: 100%;
   /* height: 500px; */
   min-height: 340px;
@@ -416,7 +439,7 @@ opacity: 1;
   background-position: center;
 }
 .book-meeting h1 {
-  line-height:34px;
+  line-height: 34px;
 }
 .book-meeting button {
   color: #181513;
@@ -458,53 +481,48 @@ opacity: 1;
   text-transform: uppercase;
 }
 
-
-
-
-.caro-product-details .slick-dots li  {
+.caro-product-details .slick-dots li {
   margin: 0 0 -30px 0 !important;
+}
+.caro-product-details .slick-dots li button {
+  font-size: 0;
+  display: block;
+  width: 12px;
+  height: 12px;
+  /* padding: 5px; */
+  cursor: pointer;
+  color: transparent;
+  border: 1px solid #d3b393; /* Added border property */
+  outline: none;
+  background: transparent !important; /* Changed background to transparent */
+  border-radius: 50%; /* Added border-radius to make it a circle */
+}
 
-  }
-  .caro-product-details .slick-dots li button {
-    font-size: 0;
-    display: block;
-    width: 12px;
-    height: 12px;
-    /* padding: 5px; */
-    cursor: pointer;
-    color: transparent;
-    border: 1px solid #D3B393; /* Added border property */
-    outline: none;
-    background: transparent !important; /* Changed background to transparent */
-    border-radius: 50%; /* Added border-radius to make it a circle */
-  }
-  
-  .caro-product-details .slick-dots li.slick-active button:before {
+.caro-product-details .slick-dots li.slick-active button:before {
   opacity: 1;
-    background: #D3B393;
-    color: transparent;
-  }
-  
-  .caro-product-details .slick-dots li button:before {
-    font-family: 'slick';
-    /* font-size: 11.65px; */
-    /* line-height: 20px; */
-    /* position: absolute; */
-    color: transparent;
-    background: transparent;
-    /* top: -2.9px; */
-    /* left: 0.1px; */
-    width: 12px;
-    height: 12px;
-    /* background-color: green !important; */
-    /* text-align: center; */
-    /* opacity: 0.25; */
-    /* color: white; */
-    /* -webkit-font-smoothing: antialiased;
+  background: #d3b393;
+  color: transparent;
+}
+
+.caro-product-details .slick-dots li button:before {
+  font-family: "slick";
+  /* font-size: 11.65px; */
+  /* line-height: 20px; */
+  /* position: absolute; */
+  color: transparent;
+  background: transparent;
+  /* top: -2.9px; */
+  /* left: 0.1px; */
+  width: 12px;
+  height: 12px;
+  /* background-color: green !important; */
+  /* text-align: center; */
+  /* opacity: 0.25; */
+  /* color: white; */
+  /* -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; */
-    border-radius: 50%; /* Added border-radius to make it a circle */
-  }
-  
+  border-radius: 50%; /* Added border-radius to make it a circle */
+}
 
 /*---------------------------------- /Product Details ---------------------------*/
 /*------------------------------------ About Us ---------------------------*/
