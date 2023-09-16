@@ -132,14 +132,15 @@ const Contact = () => {
                                 </div>
                                 <div className="mt-6 flex items-center justify-start gap-x-6">
                                     <button type="submit" disabled={isSubmitting}>
-                                        Submit
-                                        <Image src="/icons/arrow_top.svg" width={18} height={20} alt='icon' />
+                                        SUBMIT
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-6 transform rotate-45">
+                                            <path strokeLinecap="round" strokeLinejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+                                        </svg>
                                     </button>
                                 </div>
                             </form>
                         )}
                     </Formik>
-
                 </div>
             </div>
         </div>

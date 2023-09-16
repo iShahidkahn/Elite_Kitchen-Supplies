@@ -12,7 +12,7 @@ const About = () => {
                     We are passionate about selling products that enrich lives and transforms spaces. With a deep appreciation for craftsmanship and a commitment to exceptional quality, we strive to offer kitchen and bath pieces that combine timeless elegance with modern functionality.
                 </p>
             </div>
-            <div className="relative lp-about ">
+            <div className="relative lp-about -mt-8 sm:-mt-0 ">
                 <div className="absolute bottom-0 md:bottom-28 w-full z-20">
                     <div className='container mx-auto px-2'>
                         <div className='w-full max-w-screen-lg mx-auto py-20'>

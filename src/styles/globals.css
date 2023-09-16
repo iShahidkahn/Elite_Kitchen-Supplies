@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* styles/fonts.css */
-
 @font-face {
   font-family: "Urbanist";
   src: url("../../public/fonts/Urbanist-VariableFont_wght.ttf")
@@ -12,9 +10,6 @@
   font-style: normal;
 }
 
-.hide-nav {
-  display: none !important;
-}
 body,
 html {
   font-family: "Urbanist", sans-serif !important;
@@ -37,8 +32,8 @@ html {
   }
 }
 
-.active {
-  color: #cf940a;
+.hide-nav {
+  display: none !important;
 }
 
 .nav button {
@@ -129,7 +124,6 @@ html {
   color: #fff;
 }
 
-
 .category a {
   transition: background-color 0.4s ease, color 0.4s ease;
 }
@@ -140,9 +134,7 @@ html {
 
 @media only screen and (max-width: 767px) {
   .btn-category {
- 
     margin-top: 10px;
-   
   }
 }
 
@@ -230,7 +222,6 @@ html {
   display: block;
   width: 12px;
   height: 12px;
-  /* padding: 5px; */
   cursor: pointer;
   color: transparent;
   border: 1px solid #d3b393;
@@ -254,6 +245,14 @@ html {
   border-radius: 50%;
 }
 
+.join-us button {
+  transition: background-color 0.4s ease, color 0.4s ease;
+
+}
+.join-us button:hover {
+  background: #000;
+}
+
 /*----------- /Customer Review Section ---------------*/
 
 /*------------------------------------- /Landing Page ---------------------------------*/
@@ -272,7 +271,6 @@ html {
 /*------------------- Footer --------------------------*/
 .footer {
   background: #181513;
-  /* padding: 50px 40px; */
 }
 
 .footer h1 {
@@ -303,7 +301,7 @@ html {
   padding: 30px 40px;
 }
 
-.footer .social .ic {
+ .social .ic {
   display: flex;
   padding: 8px;
   justify-content: center;
@@ -312,6 +310,7 @@ html {
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
 }
+
 
 /*------------------- Footer --------------------------*/
 
@@ -472,7 +471,6 @@ html {
   display: block;
   width: 12px;
   height: 12px;
-  /* padding: 5px; */
   cursor: pointer;
   color: transparent;
   border: 1px solid #d3b393;
@@ -535,6 +533,11 @@ textarea {
   text-transform: uppercase;
   border-radius: 8px;
   background: #f2e8de;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.connect-us-form button:hover {
+  background: #d3b393;
+  color: white !important;
 }
 /*---------------------------------- /About Us ---------------------------*/
 
@@ -595,7 +598,6 @@ textarea {
 .cart-form button:hover {
   background: #000;
 }
-
 
 /*---------------------------------- /Cart Details ---------------------------*/
 

@@ -2,6 +2,8 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Newsletter = () => {
     const validationSchema = Yup.object({
@@ -44,13 +46,23 @@ const Newsletter = () => {
                             onBlur={formik.handleBlur}
                             value={formik.values.email}
                         />
-                        <button type="submit" className="md:ms-3 ms-2 mt-4 sm:mt-0">
+                        <button type="submit" className=" md:ms-3 ms-2 mt-4 sm:mt-0">
                             Join
                         </button>
                         {formik.touched.email && formik.errors.email ? (
                             <div className="ms-1 mt-1 text-start text-sm" style={{ color: "red" }}>{formik.errors.email}</div>
                         ) : null}
                     </form>
+                </div>
+                <div className="flex justify-center">
+                    <div className="social flex gap-4 mt-4">
+                        <Link href="#" className='' style={{ background: "#947D66", borderRadius: "12px" }}>
+                            <Image src="/icons/fb_white.svg" className="ic" width={20} height={0} alt='fb' />
+                        </Link>
+                        <Link href="#" className='' style={{ background: "#947D66", borderRadius: "12px" }}>
+                            <Image src="/icons/instagram_white.svg" className="ic" width={20} height={0} alt='fb' />
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

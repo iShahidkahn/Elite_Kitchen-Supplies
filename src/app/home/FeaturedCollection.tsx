@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Image from "next/image";
+import Link from "next/link";
 
 interface FeaturedCollectionProps { }
 
@@ -11,6 +12,17 @@ const sliderData = [
   {
     image: "/images/slider/bathtub.svg",
     link_text: "Bathtubs",
+    link: "/products",
+  },
+  {
+    image: "/images/slider/faucet.svg",
+    link_text: "Faucets",
+    link: "",
+  },
+
+  {
+    image: "/images/slider/bathtub.svg",
+    link_text: "Bathtubs",
     link: "",
   },
   {
@@ -18,9 +30,15 @@ const sliderData = [
     link_text: "Faucets",
     link: "",
   },
+ 
   {
-    image: "/images/slider/shower.svg",
-    link_text: "Showers",
+    image: "/images/slider/bathtub.svg",
+    link_text: "Bathtubs",
+    link: "",
+  },
+  {
+    image: "/images/slider/faucet.svg",
+    link_text: "Faucets",
     link: "",
   },
   {
@@ -34,11 +52,6 @@ const sliderData = [
     link: "",
   },
   {
-    image: "/images/slider/shower.svg",
-    link_text: "Showers",
-    link: "",
-  },
-  {
     image: "/images/slider/bathtub.svg",
     link_text: "Bathtubs",
     link: "",
@@ -48,11 +61,7 @@ const sliderData = [
     link_text: "Faucets",
     link: "",
   },
-  {
-    image: "/images/slider/shower.svg",
-    link_text: "Showers",
-    link: "",
-  },
+ 
 
 ]
 
@@ -153,7 +162,11 @@ const FeaturedCollection: React.FC<FeaturedCollectionProps> = () => {
               return (
                 <div key={index} className="carousel-img relative">
                   <Image src={slide.image} width={360} height={400} alt="image" className="rounded-lg sm:w-full" />
+
+                  <Link href={slide.link}>
                   <button className="absolute bottom-6 left-6 bg-white px-4 py-1 font-semibold rounded-md">{slide.link_text}</button>
+
+                  </Link>
                 </div>
               );
             })}
