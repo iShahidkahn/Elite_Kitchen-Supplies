@@ -274,7 +274,7 @@ html {
 /*------------------- Footer --------------------------*/
 .footer {
   background: #181513;
-  padding: 50px 40px;
+  /* padding: 50px 40px; */
 }
 
 .footer h1 {
@@ -606,6 +606,15 @@ background: #000;
 
 .map{
   width: 90%;
-  height: 200px;
-  border-radius: 20px;
+  height: 170px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+
+@media only screen and (max-width: 767px) {
+  .map{
+    width: 100%;
+ 
+  }
 }
