@@ -129,7 +129,7 @@ const FeaturedCollection: React.FC<FeaturedCollectionProps> = () => {
   };
 
   return (
-    <div className="featured-collection py-10 ms:py-16">
+    <div className="featured-collection py-10 ms:py-16 my-16">
       <div className="md:flex justify-between items-center mx-4 sm:mx-12">
         <div>
           <h1 className="sm:text-2xl md:text-3xl uppercase font-semibold text-white">

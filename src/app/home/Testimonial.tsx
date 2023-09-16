@@ -125,9 +125,9 @@ const Testimonial: React.FC<TestimonialProps> = () => {
     }, []);
 
     return (
-        <div className="customer-review py-16 ms-3">
+        <div className="customer-review mx-4 sm:mx-6 md:mx-10 my-16">
             <div>
-                <h1 className="text-3xl uppercase font-semibold ">customer review</h1>
+                <h1 className="text-3xl uppercase font-semibold">customer review</h1>
                 <p className="text-sm leading-6 font-normal" style={{ color: "#947D66" }}>
                     Discover the power of customer satisfaction through their inspiring stories
                 </p>

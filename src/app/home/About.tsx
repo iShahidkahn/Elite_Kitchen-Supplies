@@ -4,7 +4,7 @@ import React from 'react'
 const About = () => {
     return (
         <>
-            <div className='px-3 md:px-32 mb-14 md:mb-10 mt-24'>
+            <div className='px-3 sm:px-10  md:px-32 mb-14 md:mb-10 mt-10'>
                 <h1 className="text-center text-xl md:text-3xl font-semibold leading-7 md:leading-10 uppercase">
                     We are passionate about Bath Fittings that enrich lives and transforms spaces.
                 </h1>

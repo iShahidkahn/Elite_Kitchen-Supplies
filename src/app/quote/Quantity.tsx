@@ -1,11 +1,17 @@
 'use client'
 import Counter from "@/components/Counter";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import RequestForm from "./RequestForm";
 
+interface Product {
+    name: string;
+    description: string;
+    price: string;
+    image: string;
+}
 
-const cartData = [
+const cartData: Product[] = [
     {
         name: "kohler",
         description: "Purist 1.2 GPM Widespread Bathroom Faucet",
@@ -34,6 +40,25 @@ const cartData = [
 ]
 
 const Quantity = () => {
+
+    const [productCheckboxes, setProductCheckboxes] = useState<boolean[]>(
+        cartData.map(() => false)
+    );
+
+    const handleSelectAll = () => {
+        setProductCheckboxes((prevCheckboxes) =>
+            prevCheckboxes.map(() => !selectAll)
+        );
+    };
+
+    const handleProductCheckboxChange = (index: number) => {
+        setProductCheckboxes((prevCheckboxes) =>
+            prevCheckboxes.map((checked, i) => (i === index ? !checked : checked))
+        );
+    };
+
+    const selectAll = productCheckboxes.every((checkbox) => checkbox);
+
     return (
         <div className="wrapper">
             <div className="quantity" >
@@ -44,10 +69,12 @@ const Quantity = () => {
                                 <div className="flex items-center gap-3">
                                     <div className="flex items-center gap-3">
                                         <input
-                                            id="offers"
-                                            name="offers"
+                                            id="selectAll"
+                                            name="selectAll"
                                             type="checkbox"
                                             className="checkbox"
+                                            checked={selectAll}
+                                            onChange={handleSelectAll}
                                         />
                                         <h1 className="text-sm font-medium leading-5">Products</h1>
                                     </div>
@@ -63,14 +90,16 @@ const Quantity = () => {
                         <div className="grid grid-cols-4">
                             {cartData.map((data, index) => {
                                 return (
-                                    <>
-                                        <div className="col-span-4 lg:col-span-2" key={index}>
+                                    <React.Fragment key={index}>
+                                        <div className="col-span-4 lg:col-span-2">
                                             <div className="flex items-center gap-3 md:h-24">
                                                 <input
-                                                    id="offers"
-                                                    name="offers"
+                                                    id={`productCheckbox${index}`}
+                                                    name={`productCheckbox${index}`}
                                                     type="checkbox"
                                                     className="checkbox"
+                                                    checked={productCheckboxes[index]}
+                                                    onChange={() => handleProductCheckboxChange(index)}
                                                 />
                                                 <Image src={data.image} width={80} height={80} alt="product image" />
                                                 <div>
@@ -89,7 +118,7 @@ const Quantity = () => {
                                                 <h1 className="text-xl font-medium leading-5 uppercase">{data.price}</h1>
                                             </div>
                                         </div>
-                                    </>
+                                    </React.Fragment>
                                 );
                             }
                             )}

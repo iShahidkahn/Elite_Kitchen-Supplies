@@ -4,8 +4,8 @@ import React from 'react'
 
 const ProductList = () => {
     return (
-        <div className='my-20'>
-            <div className="flex items-center justify-between mx-1 sm:mx-4 mb-6 sm:mb-16">
+        <div className='my-20 mx-4 sm:mx-6 md:mx-10'>
+            <div className="flex items-center justify-between mb-6 sm:mb-16">
                 <div>
                     <h1 className='text-xl sm:text-2xl md:text-3xl font-semibold uppercase leading-10'>brands we carry</h1>
                     <p className='text-sm' style={{ color: "#6A5A49" }}>Fresh styles, new beginnings: discover our latest arrivals!</p>

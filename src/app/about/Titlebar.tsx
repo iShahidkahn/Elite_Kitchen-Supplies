@@ -1,11 +1,22 @@
-import Image from 'next/image'
+import React from 'react';
+import Image from 'next/image';
 
-const Titlebar = () => {
+const TitleBar = () => {
     return (
-        <div>
-            <Image src="/images/about_us_title.svg" width={0} height={0} alt="title" className='w-full' />
+        <div className="relative">
+            <Image
+                src="/images/titles/about.svg"
+                className="h-44 md:h-full w-full object-cover object-center md:object-center"
+                width={100}
+                height={300}
+                alt="image"
+            />
+            <div className="absolute inset-0 bg-black opacity-40"></div>
+            <div className="absolute inset-0 flex items-center justify-center text-white text-4xl sm:text-6xl uppercase font-semibold	">
+                about us
+            </div>
         </div>
-    )
-}
+    );
+};
 
-export default Titlebar
+export default TitleBar;

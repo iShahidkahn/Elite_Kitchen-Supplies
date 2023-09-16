@@ -7,10 +7,9 @@ import Image from 'next/image';
 import Counter from "@/components/Counter";
 import Description from "./Description";
 import Link from "next/link";
+import ProductImages from "./ProductImages";
 
 interface DetailsProps { }
-
-
 
 const sliderData = [
     {
@@ -25,7 +24,6 @@ const sliderData = [
     {
         product_image:"/images/products/p4.svg",
     },
-    
 
 ]
 
@@ -40,38 +38,10 @@ const Details: React.FC<DetailsProps> = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 0,
-        autoplay: true, // Auto-scroll enabled
-        autoplaySpeed: 4000, // Delay between each scroll (1 second in this case)
-
-        // responsive: [
-        //     {
-        //         breakpoint: 1024,
-        //         settings: {
-        //             slidesToShow: 3,
-        //             slidesToScroll: 3,
-        //             infinite: true,
-        //             dots: true,
-        //         },
-        //     },
-        //     {
-        //         breakpoint: 768,
-        //         settings: {
-        //             slidesToShow: 2,
-        //             slidesToScroll: 2,
-        //             initialSlide: 2,
-        //         },
-        //     },
-        //     {
-        //         breakpoint: 480,
-        //         settings: {
-        //             slidesToShow: 1,
-        //             slidesToScroll: 1,
-        //         },
-        //     },
-        // ],
+        autoplay: true, 
+        autoplaySpeed: 4000,
     };
 
-    // Use useEffect to start the auto-scroll after the component mounts
     useEffect(() => {
         if (sliderRef.current) {
             sliderRef.current.slickPlay();
@@ -81,20 +51,9 @@ const Details: React.FC<DetailsProps> = () => {
     return (
         <div className="wrapper">
             <div className="product-details">
-                <div className="grid md:grid-cols-2 grid-cols-1">
-                    <div className="hidden md:grid md:grid-cols-6 grid-cols-1">
-                        <div className='mx-auto '>
-                            <Image src="/images/products/p1_sm.svg" width={200} height={200} alt="product one" className='me-auto rounded mb-2 cursor-pointer' />
-                            <Image src="/images/products/p2_sm.svg" width={200} height={200} alt="product one" className='me-auto rounded my-2 cursor-pointer' />
-                            <Image src="/images/products/p3_sm.svg" width={200} height={200} alt="product one" className='me-auto rounded my-2 cursor-pointer' />
-                            <Image src="/images/products/p4_sm.svg" width={200} height={200} alt="product one" className='me-auto rounded my-2 cursor-pointer' />
-                        </div>
-                        <div className="col-span-5 mx-auto">
-                            <Image src="/images/products/p1.svg" width={400} height={400} alt="product one" className='mx-auto' />
-                            <Image src="/images/products/p2.svg" width={400} height={400} alt="product one" className='mx-auto' />
-                            <Image src="/images/products/p3.svg" width={400} height={400} alt="product one" className='mx-auto' />
-                            <Image src="/images/products/p4.svg" width={400} height={400} alt="product one" className='mx-auto' />
-                        </div>
+                <div className="grid md:grid-cols-2">
+                    <div className="hidden md:grid md:grid-cols-10">
+                       <ProductImages />
                     </div>
                     {/*------------------ Mobile Phone/ Tab etc */}
                     <div className="caro-product-details mb-16 md:hidden">
@@ -130,7 +89,6 @@ const Details: React.FC<DetailsProps> = () => {
                         <div className='my-5'>
                             <Link href="/quote">
                             <button className="btn">add to quote</button>
-
                             </Link>
                         </div>
                         <div>

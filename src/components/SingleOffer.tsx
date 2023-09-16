@@ -3,7 +3,7 @@ import React from 'react'
 const SingleOffer = () => {
   return (
 
-    <div className="book-meeting relative flex items-center my-5">
+    <div className="book-meeting relative flex items-center my-5 mx-4 sm:mx-6 md:mx-10">
       <div className="absolute top-10 left-10">
         <h1 className='text-xl md:text-2xl lg:3xl text-white font-semibold uppercase'>build your dream <br /> room today!</h1>
         <button className='heroButton mt-3 md:mt-5 flex items-center gap-2'>book a meeting

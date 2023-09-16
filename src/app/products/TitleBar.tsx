@@ -1,27 +1,22 @@
-import React from 'react'
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 
 const TitleBar = () => {
-  return (
-    <div className="relative isolate overflow-hidden py-24 sm:py-32">
-    <Image
-        src="/images/title_product.png"
-        className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center"
-        width={100}
-        height={100}
-        alt="image"
-    />
-    {/* <div className="flex justify-items-center">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl lg:mx-0">
-                <h2 className="text-4xl text-center font-bold tracking-tight text-white sm:text-6xl">
-                BATHROOM                
-                </h2>
+    return (
+        <div className="relative">
+            <Image
+                src="/images/titles/bathroom.svg"
+                className="h-44 md:h-full w-full object-cover object-center md:object-center"
+                width={100}
+                height={300}
+                alt="image"
+            />
+            <div className="absolute inset-0 bg-black opacity-40"></div> 
+            <div className="absolute inset-0 flex items-center justify-center text-white text-4xl sm:text-6xl uppercase font-semibold	">
+                Bathroom
             </div>
         </div>
-    </div> */}
-</div>
-  )
-}
+    );
+};
 
-export default TitleBar
+export default TitleBar;

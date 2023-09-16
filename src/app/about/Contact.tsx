@@ -23,7 +23,7 @@ const Contact = () => {
 
     return (
         <div className='connect-us-form'>
-            <div className='mx-5 sm:mx-10 lg:mx-20 border p-8 rounded-lg my-8'>
+            <div className='mx-5 sm:mx-10 lg:mx-20 border px-4 py-5 sm:p-8 rounded-lg my-8'>
                 <div>
                     <h1 className='text-2xl uppercase mb-10'>let’s connect:</h1>
                 </div>
@@ -131,10 +131,10 @@ const Contact = () => {
                                     </div>
                                 </div>
                                 <div className="mt-6 flex items-center justify-start gap-x-6">
-                                <button type="submit" disabled={isSubmitting}>
-                    Submit
-                    <Image src="/icons/arrow_top.svg" width={18} height={20} alt='icon' />
-                  </button>
+                                    <button type="submit" disabled={isSubmitting}>
+                                        Submit
+                                        <Image src="/icons/arrow_top.svg" width={18} height={20} alt='icon' />
+                                    </button>
                                 </div>
                             </form>
                         )}

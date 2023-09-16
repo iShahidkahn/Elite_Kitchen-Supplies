@@ -6,6 +6,8 @@ import Hero from "./home/Hero";
 import ProductList from "./home/ProductList";
 import Testimonial from "./home/Testimonial";
 import Footer from "@/components/Footer";
+import SingleOffer from "@/components/SingleOffer";
+import Newsletter from "@/components/Newsletter";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
       <ProductList />
       <FeaturedCollection />
       <Testimonial />
+      <SingleOffer />
+      <Newsletter />
       <Footer />
     </>
   )
