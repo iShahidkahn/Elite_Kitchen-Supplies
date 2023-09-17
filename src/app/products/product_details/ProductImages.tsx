@@ -21,38 +21,38 @@ function ProductImages() {
 
     return (
         <>
-            <div className="col-span-1">
-                {images.map((image, index) => (
-                    <div
-                        key={index}
-                        onClick={() => handleImageClick(index)}
-                        className={`cursor-pointer ${index === selectedImage ? 'border-1 transform scale-105' : ''
-                            }`}
-                    >
+            <div className="hidden md:grid md:grid-cols-10 grid-cols-1">
+                <div className="col-span-1">
+                    {images.map((image, index) => (
+                        <div
+                            key={index}
+                            onClick={() => handleImageClick(index)}
+                            className={`cursor-pointer ${index === selectedImage ? 'border-1 transform scale-105' : ''
+                                }`}
+                        >
+                            <img
+                                src={image.src}
+                                width={60}
+                                height={40}
+                                alt={image.alt}
+                                className="me-auto rounded mb-2"
+                            />
+                        </div>
+                    ))}
+                </div>
+                <div className="col-span-9">
+                    <div className="mx-5">
                         <img
-                            src={image.src}
-                            width={60}
-                            height={40}
-                            alt={image.alt}
-                            className="me-auto rounded mb-2"
+                            src={images[selectedImage].src.replace('p1.svg', '.svg')}
+                            width={400}
+                            height={400}
+                            alt={images[selectedImage].alt}
+                            className="rounded-lg w-full"
                         />
                     </div>
-                ))}
-            </div>
-            <div className="col-span-9">
-                <div className="mx-5">
-                    <img
-                        src={images[selectedImage].src.replace('p1.svg', '.svg')}
-                        width={400}
-                        height={400}
-                        alt={images[selectedImage].alt}
-                        className="rounded-lg w-full"
-                    />
                 </div>
             </div>
         </>
-
-
     );
 }
 

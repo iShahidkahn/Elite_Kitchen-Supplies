@@ -30,7 +30,7 @@ const Navbar = () => {
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <Image src='/icons/Menu.svg' width={24} height={20} alt='img' className='transition-transform ease-in-out duration-300 transform rotate-90' />
+                    <Image src='/icons/Menu.svg' width={24} height={20} alt='img' />
                   ) : (
                     <Image src='/icons/Menu.svg' width={24} height={20} alt='img' />)}
                 </Disclosure.Button>
@@ -76,7 +76,7 @@ const Navbar = () => {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    item.current ? '' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                     'block rounded-md px-3 py-2 text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}

@@ -13,16 +13,16 @@ interface DetailsProps { }
 
 const sliderData = [
     {
-        product_image:"/images/products/p1.svg",
+        product_image: "/images/products/p1.svg",
     },
     {
-        product_image:"/images/products/p2.svg",
+        product_image: "/images/products/p2.svg",
     },
     {
-        product_image:"/images/products/p3.svg",
+        product_image: "/images/products/p3.svg",
     },
     {
-        product_image:"/images/products/p4.svg",
+        product_image: "/images/products/p4.svg",
     },
 
 ]
@@ -38,7 +38,7 @@ const Details: React.FC<DetailsProps> = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 0,
-        autoplay: true, 
+        autoplay: true,
         autoplaySpeed: 4000,
     };
 
@@ -51,17 +51,15 @@ const Details: React.FC<DetailsProps> = () => {
     return (
         <div className="wrapper">
             <div className="product-details">
-                <div className="grid md:grid-cols-2">
-                    <div className="hidden md:grid md:grid-cols-10">
-                       <ProductImages />
-                    </div>
+                <div className="grid md:grid-cols-2 grid-cols-1">
+                    <ProductImages />
                     {/*------------------ Mobile Phone/ Tab etc */}
                     <div className="caro-product-details mb-16 md:hidden">
                         <Slider ref={sliderRef} {...settings}>
                             {sliderData.map((slide, index) => {
                                 return (
                                     <div key={index} >
-                                        <Image src={slide.product_image} width={100} height={400} className="w-full" alt="product"/>
+                                        <Image src={slide.product_image} width={100} height={100} className="w-full" alt="product" />
                                     </div>
                                 );
                             })}
@@ -88,7 +86,7 @@ const Details: React.FC<DetailsProps> = () => {
                         </div>
                         <div className='my-5'>
                             <Link href="/quote">
-                            <button className="btn">add to quote</button>
+                                <button className="btn">add to quote</button>
                             </Link>
                         </div>
                         <div>

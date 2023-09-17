@@ -3,6 +3,7 @@ import React from 'react'
 import Details from './Details'
 import SingleOffer from '@/components/SingleOffer'
 import Newsletter from '@/components/Newsletter'
+import Footer from '@/components/Footer'
 
 const page = () => {
   return (
@@ -11,6 +12,7 @@ const page = () => {
      <Details />
      <SingleOffer />
      <Newsletter />
+     <Footer />
     </>
   )
 }

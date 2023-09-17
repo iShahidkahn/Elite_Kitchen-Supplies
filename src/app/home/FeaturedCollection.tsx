@@ -30,7 +30,7 @@ const sliderData = [
     link_text: "Faucets",
     link: "",
   },
- 
+
   {
     image: "/images/slider/bathtub.svg",
     link_text: "Bathtubs",
@@ -61,12 +61,12 @@ const sliderData = [
     link_text: "Faucets",
     link: "",
   },
- 
+
 
 ]
 
 const CustomNextArrow = (props: any) => {
-  const { className, style, onClick, sliderRef } = props; 
+  const { className, style, onClick, sliderRef } = props;
   return (
     <button
       className={`custom-next-arrow ${className}`}
@@ -82,7 +82,7 @@ const CustomNextArrow = (props: any) => {
 };
 
 const CustomPrevArrow = (props: any) => {
-  const { className, style, onClick, sliderRef } = props; 
+  const { className, style, onClick, sliderRef } = props;
   return (
     <button
       className={`custom-prev-arrow ${className}`}
@@ -102,13 +102,13 @@ const FeaturedCollection: React.FC<FeaturedCollectionProps> = () => {
 
   const settings = {
     dots: false,
-    infinite: true, 
+    infinite: true,
     speed: 1200,
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
-    nextArrow: <CustomNextArrow sliderRef={sliderRef} />, 
-    prevArrow: <CustomPrevArrow sliderRef={sliderRef} />, 
+    nextArrow: <CustomNextArrow sliderRef={sliderRef} />,
+    prevArrow: <CustomPrevArrow sliderRef={sliderRef} />,
     responsive: [
       {
         breakpoint: 1024,
@@ -162,10 +162,8 @@ const FeaturedCollection: React.FC<FeaturedCollectionProps> = () => {
               return (
                 <div key={index} className="carousel-img relative">
                   <Image src={slide.image} width={360} height={400} alt="image" className="rounded-lg sm:w-full" />
-
                   <Link href={slide.link}>
-                  <button className="absolute bottom-6 left-6 bg-white px-4 py-1 font-semibold rounded-md">{slide.link_text}</button>
-
+                    <button className="absolute bottom-6 left-6 bg-white px-4 py-1 font-semibold rounded-md">{slide.link_text}</button>
                   </Link>
                 </div>
               );
