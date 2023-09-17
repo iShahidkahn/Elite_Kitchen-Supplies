@@ -63,7 +63,7 @@ const Navbar = () => {
                   type="button"
                   className="rounded"
                 >
-                  Book a meeting
+                 <span className='hidden sm:block'>Book a meeting</span> <span className='sm:hidden'>meet us</span>
                 </button>
               </div>
             </div>
